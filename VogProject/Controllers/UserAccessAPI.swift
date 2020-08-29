@@ -8,6 +8,16 @@
 
 import UIKit
 
-class UserAccessAPI: NSObject {
-
+class UserAccessAPI: UserAccessProtocol {
+//    func getUserData() -> UserModel {
+//        
+//    }
+//    
+//    func setUserData() -> Bool {
+//        
+//    }
+//    
+//    func setUserImage(imageData: UIImage) -> Bool {
+//        
+//    }
 }

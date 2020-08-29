@@ -15,6 +15,13 @@
 		4F35688724F8CBB400B0922A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F35688524F8CBB400B0922A /* LaunchScreen.storyboard */; };
 		4F35689224F8CBB400B0922A /* VogProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F35689124F8CBB400B0922A /* VogProjectTests.swift */; };
 		4F35689D24F8CBB400B0922A /* VogProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F35689C24F8CBB400B0922A /* VogProjectUITests.swift */; };
+		4F8BD7DA24FB06C00090695D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8BD7D924FB06C00090695D /* UserModel.swift */; };
+		4F8BD7DD24FB077E0090695D /* UserAccessProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8BD7DC24FB077E0090695D /* UserAccessProtocol.swift */; };
+		4F8BD7DF24FB08820090695D /* UserAccessAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8BD7DE24FB08820090695D /* UserAccessAPI.swift */; };
+		4F8BD7E124FB088F0090695D /* UserAccessLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8BD7E024FB088F0090695D /* UserAccessLocal.swift */; };
+		5FCE93201A6C92EB7E1D8F59 /* Pods_VogProject_VogProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D72ED0E0EBF9CBFE426F971A /* Pods_VogProject_VogProjectUITests.framework */; };
+		A69E6BD2AB6D715069A967F6 /* Pods_VogProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A688295B2CD9AFA9E9899E /* Pods_VogProject.framework */; };
+		A974F3638FF00BB4D6FEDCC9 /* Pods_VogProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF180F13F67B5B1233BB5F9E /* Pods_VogProjectTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0138AC448C79A441A4B2E7ED /* Pods-VogProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VogProject.release.xcconfig"; path = "Target Support Files/Pods-VogProject/Pods-VogProject.release.xcconfig"; sourceTree = "<group>"; };
+		49A688295B2CD9AFA9E9899E /* Pods_VogProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VogProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F35687724F8CBB100B0922A /* VogProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VogProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F35687A24F8CBB100B0922A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F35687C24F8CBB100B0922A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +58,17 @@
 		4F35689824F8CBB400B0922A /* VogProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VogProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F35689C24F8CBB400B0922A /* VogProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VogProjectUITests.swift; sourceTree = "<group>"; };
 		4F35689E24F8CBB400B0922A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F8BD7D924FB06C00090695D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		4F8BD7DC24FB077E0090695D /* UserAccessProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccessProtocol.swift; sourceTree = "<group>"; };
+		4F8BD7DE24FB08820090695D /* UserAccessAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccessAPI.swift; sourceTree = "<group>"; };
+		4F8BD7E024FB088F0090695D /* UserAccessLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccessLocal.swift; sourceTree = "<group>"; };
+		544684151A812E92857FAFDE /* Pods-VogProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VogProjectTests.release.xcconfig"; path = "Target Support Files/Pods-VogProjectTests/Pods-VogProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		625B285D9ABA21BE70C99696 /* Pods-VogProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VogProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-VogProjectTests/Pods-VogProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		69E29C39832C1EE67B695E7C /* Pods-VogProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VogProject.debug.xcconfig"; path = "Target Support Files/Pods-VogProject/Pods-VogProject.debug.xcconfig"; sourceTree = "<group>"; };
+		6EC243A77E99DA4308CF379C /* Pods-VogProject-VogProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VogProject-VogProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-VogProject-VogProjectUITests/Pods-VogProject-VogProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		757573C611F6B02B3E4551B6 /* Pods-VogProject-VogProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VogProject-VogProjectUITests.debug.xcconfig"; path = "Target Support Files/Pods-VogProject-VogProjectUITests/Pods-VogProject-VogProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D72ED0E0EBF9CBFE426F971A /* Pods_VogProject_VogProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VogProject_VogProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF180F13F67B5B1233BB5F9E /* Pods_VogProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VogProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A69E6BD2AB6D715069A967F6 /* Pods_VogProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A974F3638FF00BB4D6FEDCC9 /* Pods_VogProjectTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FCE93201A6C92EB7E1D8F59 /* Pods_VogProject_VogProjectUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +106,8 @@
 				4F35689024F8CBB400B0922A /* VogProjectTests */,
 				4F35689B24F8CBB400B0922A /* VogProjectUITests */,
 				4F35687824F8CBB100B0922A /* Products */,
+				6984247C95C2961DBD83F0F1 /* Pods */,
+				901219FF02E23530F6D835CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +124,8 @@
 		4F35687924F8CBB100B0922A /* VogProject */ = {
 			isa = PBXGroup;
 			children = (
+				4F8BD7DB24FB075B0090695D /* Controllers */,
+				4F8BD7D824FB06980090695D /* Models */,
 				4F35687A24F8CBB100B0922A /* AppDelegate.swift */,
 				4F35687C24F8CBB100B0922A /* SceneDelegate.swift */,
 				4F35687E24F8CBB100B0922A /* ViewController.swift */,
@@ -128,6 +155,48 @@
 			path = VogProjectUITests;
 			sourceTree = "<group>";
 		};
+		4F8BD7D824FB06980090695D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4F8BD7D924FB06C00090695D /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4F8BD7DB24FB075B0090695D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4F8BD7DC24FB077E0090695D /* UserAccessProtocol.swift */,
+				4F8BD7DE24FB08820090695D /* UserAccessAPI.swift */,
+				4F8BD7E024FB088F0090695D /* UserAccessLocal.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6984247C95C2961DBD83F0F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				69E29C39832C1EE67B695E7C /* Pods-VogProject.debug.xcconfig */,
+				0138AC448C79A441A4B2E7ED /* Pods-VogProject.release.xcconfig */,
+				757573C611F6B02B3E4551B6 /* Pods-VogProject-VogProjectUITests.debug.xcconfig */,
+				6EC243A77E99DA4308CF379C /* Pods-VogProject-VogProjectUITests.release.xcconfig */,
+				625B285D9ABA21BE70C99696 /* Pods-VogProjectTests.debug.xcconfig */,
+				544684151A812E92857FAFDE /* Pods-VogProjectTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		901219FF02E23530F6D835CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49A688295B2CD9AFA9E9899E /* Pods_VogProject.framework */,
+				D72ED0E0EBF9CBFE426F971A /* Pods_VogProject_VogProjectUITests.framework */,
+				FF180F13F67B5B1233BB5F9E /* Pods_VogProjectTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F3568A124F8CBB400B0922A /* Build configuration list for PBXNativeTarget "VogProject" */;
 			buildPhases = (
+				6319701398849CE8DA8FFE53 /* [CP] Check Pods Manifest.lock */,
 				4F35687324F8CBB100B0922A /* Sources */,
 				4F35687424F8CBB100B0922A /* Frameworks */,
 				4F35687524F8CBB100B0922A /* Resources */,
+				185D241EE1990B0A4B9F7E17 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +223,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F3568A424F8CBB400B0922A /* Build configuration list for PBXNativeTarget "VogProjectTests" */;
 			buildPhases = (
+				558E96953B26D80C17307E9E /* [CP] Check Pods Manifest.lock */,
 				4F35688924F8CBB400B0922A /* Sources */,
 				4F35688A24F8CBB400B0922A /* Frameworks */,
 				4F35688B24F8CBB400B0922A /* Resources */,
@@ -170,9 +242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F3568A724F8CBB400B0922A /* Build configuration list for PBXNativeTarget "VogProjectUITests" */;
 			buildPhases = (
+				508F9290A0F79382E28FDC57 /* [CP] Check Pods Manifest.lock */,
 				4F35689424F8CBB400B0922A /* Sources */,
 				4F35689524F8CBB400B0922A /* Frameworks */,
 				4F35689624F8CBB400B0922A /* Resources */,
+				715330E22B7AA3484C6C6D9E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,13 +328,120 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		185D241EE1990B0A4B9F7E17 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VogProject/Pods-VogProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VogProject/Pods-VogProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VogProject/Pods-VogProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		508F9290A0F79382E28FDC57 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VogProject-VogProjectUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		558E96953B26D80C17307E9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VogProjectTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6319701398849CE8DA8FFE53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VogProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		715330E22B7AA3484C6C6D9E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VogProject-VogProjectUITests/Pods-VogProject-VogProjectUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VogProject-VogProjectUITests/Pods-VogProject-VogProjectUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VogProject-VogProjectUITests/Pods-VogProject-VogProjectUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4F35687324F8CBB100B0922A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4F35687F24F8CBB100B0922A /* ViewController.swift in Sources */,
+				4F8BD7E124FB088F0090695D /* UserAccessLocal.swift in Sources */,
 				4F35687B24F8CBB100B0922A /* AppDelegate.swift in Sources */,
+				4F8BD7DD24FB077E0090695D /* UserAccessProtocol.swift in Sources */,
+				4F8BD7DF24FB08820090695D /* UserAccessAPI.swift in Sources */,
+				4F8BD7DA24FB06C00090695D /* UserModel.swift in Sources */,
 				4F35687D24F8CBB100B0922A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +613,7 @@
 		};
 		4F3568A224F8CBB400B0922A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69E29C39832C1EE67B695E7C /* Pods-VogProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +631,7 @@
 		};
 		4F3568A324F8CBB400B0922A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0138AC448C79A441A4B2E7ED /* Pods-VogProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +649,7 @@
 		};
 		4F3568A524F8CBB400B0922A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 625B285D9ABA21BE70C99696 /* Pods-VogProjectTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +671,7 @@
 		};
 		4F3568A624F8CBB400B0922A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 544684151A812E92857FAFDE /* Pods-VogProjectTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +693,7 @@
 		};
 		4F3568A824F8CBB400B0922A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 757573C611F6B02B3E4551B6 /* Pods-VogProject-VogProjectUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +713,7 @@
 		};
 		4F3568A924F8CBB400B0922A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EC243A77E99DA4308CF379C /* Pods-VogProject-VogProjectUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

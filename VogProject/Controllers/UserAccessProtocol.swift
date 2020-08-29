@@ -8,6 +8,8 @@
 
 import UIKit
 
-class UserAccessProtocol: NSObject {
-
+protocol UserAccessProtocol {
+    func getUserData() -> UserModel
+    func setUserImage(imageData : UIImage) -> Bool
+    func setUserData() -> Bool
 }

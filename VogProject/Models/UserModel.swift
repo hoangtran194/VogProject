@@ -9,5 +9,10 @@
 import UIKit
 
 class UserModel: NSObject {
-
+    public var userName : String?
+    public var firstName : String?
+    public var lastName : String?
+    public var passWord : String?
+    public var imageURL : String?
+    public var userImage : UIImage?
 }

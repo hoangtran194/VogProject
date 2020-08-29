@@ -9,5 +9,15 @@
 import UIKit
 
 class UserAccessLocal: NSObject {
-
+//    func getUserData() -> UserModel {
+//
+//    }
+//
+//    func setUserData() -> Bool {
+//
+//    }
+//    
+//    func setUserImage(imageData: UIImage) -> Bool {
+//
+//    }
 }
