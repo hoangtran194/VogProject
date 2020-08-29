@@ -6,7 +6,8 @@ target 'VogProject' do
   use_frameworks!
 
   # Pods for VogProject
-    pod “Alamofire”
+    pod 'Alamofire'
+    pod 'KeychainAccess'
 
   target 'VogProjectTests' do
     inherit! :search_paths

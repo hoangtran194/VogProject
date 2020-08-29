@@ -9,5 +9,16 @@
 import UIKit
 
 class Constants: NSObject {
-
+    ///////////////////////////////////////////////////////////////
+    //MARK: - API
+    ///////////////////////////////////////////////////////////////
+    static let baseUrl              = "https://api.foo.com/"
+    static let getProfile           = baseUrl + "/profiles/mine"
+    static let updateProfile        = baseUrl + "/profiles/update"
+    static let updatePassWord       = baseUrl + "/password/change"
+    
+    ///////////////////////////////////////////////////////////////
+    //MARK: - Others
+    ///////////////////////////////////////////////////////////////
+    static let emptyValue           = ""
 }
