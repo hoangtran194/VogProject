@@ -1,0 +1,6 @@
+framework module Pods_VogProjectTests {
+  umbrella header "Pods-VogProjectTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
