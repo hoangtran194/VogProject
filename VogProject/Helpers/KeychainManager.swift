@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KeychainAccess
 
 class KeychainManager: NSObject {
     static let shareInstance        = KeychainManager()

@@ -21,4 +21,5 @@ class Constants: NSObject {
     //MARK: - Others
     ///////////////////////////////////////////////////////////////
     static let emptyValue           = ""
+    static let kToken               = "kToken"
 }

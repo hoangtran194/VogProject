@@ -9,15 +9,16 @@
 import UIKit
 
 class UserAccessLocal: UserAccessProtocol {
-    func getUserData() -> UserModel {
-        return UserModel()
+    func getUserData(completion: @escaping (Error?, UserModel?) -> ()) {
+        //TODO: add code for local usage here
     }
     
-    func setUserData() -> Bool {
-        return true
+    func setUserData(_ userData: UserModel, completion: @escaping (Error?, UserModel?) -> ()) {
+        //TODO: add code for local usage here
     }
     
-    func setUserImage(imageData: UIImage) -> Bool {
-        return true
+    func setUserPassword(_ userData: UserModel, completion: @escaping (Error?, UserModel?) -> ()) {
+        //TODO: add code for local usage here
     }
+    
 }

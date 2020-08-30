@@ -9,7 +9,7 @@
 import UIKit
 
 protocol UserAccessProtocol {
-    func getUserData() -> UserModel
-    func setUserImage(imageData : UIImage) -> Bool
-    func setUserData() -> Bool
+    func getUserData(completion : @escaping(Error?,UserModel?)->())
+    func setUserData(_ userData : UserModel ,completion : @escaping(Error?,UserModel?)->())
+    func setUserPassword(_ userData : UserModel ,completion : @escaping(Error?,UserModel?)->())
 }
