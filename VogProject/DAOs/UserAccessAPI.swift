@@ -19,7 +19,6 @@ enum NetworkError : Error
 class UserAccessAPI: UserAccessProtocol {
 
     
-    
     static var shared : UserAccessAPI = UserAccessAPI()
     
     ///////////////////////////////////////////////////////////////
@@ -123,6 +122,10 @@ class UserAccessAPI: UserAccessProtocol {
     
     func loadImage(imageURL: String, completion: @escaping (Error?, UIImage?) -> ()) {
         completion( NetworkError.unKnown("Need to implement get image from URL"), nil)
+    }
+    
+    func saveImage(image: UIImage, completion: @escaping (Error?, String?) -> ()) {
+        completion( NetworkError.unKnown("Need to implement save image"), nil)
     }
 }
 

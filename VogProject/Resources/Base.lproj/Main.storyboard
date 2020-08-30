@@ -22,7 +22,7 @@
                                     <constraint firstAttribute="width" constant="200" id="vBa-qj-zpe"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u87-ue-TSU">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u87-ue-TSU" userLabel="ProfileView">
                                 <rect key="frame" x="16.666666666666657" y="382" width="342" height="112"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4g-hS-Tkf">
@@ -31,7 +31,7 @@
                                             <constraint firstAttribute="height" constant="21" id="ZVM-Qb-AaH"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zn-Pq-ec7">
@@ -40,7 +40,7 @@
                                             <constraint firstAttribute="height" constant="21" id="W5S-f2-gd8"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nca-nP-vq7">
@@ -49,7 +49,7 @@
                                             <constraint firstAttribute="height" constant="21" id="IMi-yT-SMy"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -74,7 +74,9 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="2Wl-g0-aAn"/>
                                     <constraint firstAttribute="height" constant="30" id="zHj-u3-e2x"/>
                                 </constraints>
-                                <state key="normal" title="Edit Profile"/>
+                                <state key="normal" title="Edit Profile">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="editProfileButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FT5-q2-TfF"/>
                                 </connections>
@@ -93,6 +95,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Vog Assessment Project" id="6kl-3a-wrC"/>
                     <connections>
+                        <outlet property="profileView" destination="u87-ue-TSU" id="aEX-R9-goW"/>
                         <outlet property="userFirstNameLabel" destination="Nca-nP-vq7" id="Vk6-V9-LuE"/>
                         <outlet property="userImage" destination="iKe-9I-5LX" id="hJo-kO-BSp"/>
                         <outlet property="userLastNameLabel" destination="3Zn-Pq-ec7" id="b7b-Vv-vpu"/>
@@ -179,7 +182,7 @@
                                             <constraint firstItem="yvn-e1-V6N" firstAttribute="top" secondItem="4gZ-IP-0iM" secondAttribute="top" constant="8" id="ynF-lW-upy"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r1A-Sc-VlC">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r1A-Sc-VlC" userLabel="PasswordView">
                                         <rect key="frame" x="35" y="433" width="303" height="95"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tiq-IU-hA2">
@@ -212,7 +215,9 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J05-9W-z8P">
                                         <rect key="frame" x="150" y="383" width="75" height="30"/>
-                                        <state key="normal" title="Edit Profile"/>
+                                        <state key="normal" title="Edit Profile">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="editProfileButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Rv-5f-mcA"/>
                                             <action selector="editProfileButtonClicked:" destination="MTd-Ey-y7Z" eventType="touchUpInside" id="ecS-yG-lSn"/>
@@ -220,10 +225,22 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgH-2N-Vl4">
                                         <rect key="frame" x="126" y="548" width="123" height="30"/>
-                                        <state key="normal" title="Change Password"/>
+                                        <state key="normal" title="Change Password">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="changePassWordButtonClicked:" destination="MTd-Ey-y7Z" eventType="touchUpInside" id="dOc-fx-lag"/>
                                             <action selector="editProfileButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7bR-jO-xbf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqh-SG-aen">
+                                        <rect key="frame" x="87.666666666666686" y="9" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="40C-rD-uN2"/>
+                                            <constraint firstAttribute="height" constant="200" id="d1o-m3-qXW"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="changeProfilePictureButtonClicked:" destination="MTd-Ey-y7Z" eventType="touchUpInside" id="mcg-ar-96O"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -239,6 +256,8 @@
                                     <constraint firstItem="4gZ-IP-0iM" firstAttribute="leading" secondItem="njU-CX-y93" secondAttribute="leading" constant="35" id="Qmf-JZ-62X"/>
                                     <constraint firstItem="r1A-Sc-VlC" firstAttribute="top" secondItem="J05-9W-z8P" secondAttribute="bottom" constant="20" id="fHf-o5-UCI"/>
                                     <constraint firstAttribute="bottom" secondItem="DB9-Vi-ovy" secondAttribute="bottom" constant="610" id="fYg-Ad-nRx"/>
+                                    <constraint firstItem="Lqh-SG-aen" firstAttribute="centerX" secondItem="njU-CX-y93" secondAttribute="centerX" id="hQc-3m-erQ"/>
+                                    <constraint firstItem="Lqh-SG-aen" firstAttribute="top" secondItem="RTx-HO-kdU" secondAttribute="top" constant="9" id="iDP-tD-7IF"/>
                                     <constraint firstItem="njU-CX-y93" firstAttribute="trailing" secondItem="4gZ-IP-0iM" secondAttribute="trailing" constant="37" id="n6G-ST-FD7"/>
                                     <constraint firstItem="r1A-Sc-VlC" firstAttribute="leading" secondItem="njU-CX-y93" secondAttribute="leading" constant="35" id="qqF-bh-HDF"/>
                                     <constraint firstItem="J05-9W-z8P" firstAttribute="top" secondItem="4gZ-IP-0iM" secondAttribute="bottom" constant="20" id="uFH-qO-oxe"/>
@@ -257,6 +276,8 @@
                         <viewLayoutGuide key="safeArea" id="cdA-gy-PT3"/>
                     </view>
                     <connections>
+                        <outlet property="passWordView" destination="r1A-Sc-VlC" id="UN5-2T-nfI"/>
+                        <outlet property="profileView" destination="4gZ-IP-0iM" id="OcG-2Y-s7L"/>
                         <outlet property="userFirstNameTextField" destination="yvn-e1-V6N" id="mll-Ux-MTj"/>
                         <outlet property="userImage" destination="DB9-Vi-ovy" id="Esc-pm-dZb"/>
                         <outlet property="userLastNameTextField" destination="fyB-Lb-lvC" id="k1C-OG-Rcc"/>

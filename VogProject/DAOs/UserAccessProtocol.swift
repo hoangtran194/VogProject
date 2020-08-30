@@ -8,7 +8,9 @@
 
 import UIKit
 
-protocol UserAccessProtocol {    
+protocol UserAccessProtocol {
+    
+    func saveImage(image: UIImage,completion : @escaping(Error?,String?)->())
     
     func loadImage(imageURL: String,completion : @escaping(Error?,UIImage?)->())
     

@@ -9,13 +9,9 @@
 import UIKit
 
 class UserAccessLocal: UserAccessProtocol {
-    
+
     static var shared : UserAccessLocal = UserAccessLocal()
     
-    func setDefaultImage()->String?{
-        let profileImage = UIImage(named: Constants.kdefaultImageName)!
-        return saveImage(image: profileImage)
-    }
     
     /*
     * Function: if user data doesn't have make the dafault and save it to user default then return the user data
@@ -29,14 +25,18 @@ class UserAccessLocal: UserAccessProtocol {
         if object == nil {
             object = UserModel()
             object?.initDefaultUser()
-            
-            let imagePath = setDefaultImage()
-            object?.imageURL = imagePath
-                                   
-            _ = saveUserDataToUserDefault(userData: object!)
-        }                
-        
-        completion(nil, object)
+                        
+            let profileImage = UIImage(named: Constants.kdefaultImageName)!
+            saveImage(image: profileImage) { (error, filePath) in
+                let imagePath = filePath
+                object?.imageURL = imagePath
+                _ = saveUserDataToUserDefault(userData: object!)
+                
+                completion(nil, object)
+            }
+        }else{
+            completion(nil, object)
+        }        
     }
     
     /*
@@ -77,6 +77,23 @@ class UserAccessLocal: UserAccessProtocol {
         } catch {
             completion( NetworkError.unKnown("Can not get the image file"), nil)
         }
+    }
+    
+    /*
+    * Function: save image to local storage and return the file name
+    * @param:
+    * @return:
+    */
+    func saveImage(image: UIImage, completion: @escaping (Error?, String?) -> ()) {
+        let fileName = Constants.kdefaultImageName
+        let fileURL = documentsUrl.appendingPathComponent(fileName)
+        if let imageData = image.jpegData(compressionQuality: 1.0) {
+           try? imageData.write(to: fileURL, options: .atomic)
+            completion(nil,fileName)
+        }else{
+            completion( NetworkError.unKnown("Can not save the image file"), nil)
+        }
+        
     }
     
 }

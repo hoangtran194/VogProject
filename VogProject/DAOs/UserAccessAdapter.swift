@@ -36,6 +36,10 @@ class UserAccessAdapter: UserAccessProtocol {
         userAccessProtocol?.loadImage(imageURL: imageURL, completion: completion)
     }
     
+    func saveImage(image: UIImage, completion: @escaping (Error?, String?) -> ()) {
+        userAccessProtocol?.saveImage(image: image, completion: completion)
+    }
+    
     func getUserData(completion: @escaping (Error?, UserModel?) -> ()) {        
         userAccessProtocol?.getUserData(completion: completion)
     }
