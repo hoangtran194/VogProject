@@ -16,7 +16,7 @@ enum AccessType {
 
 class UserAccessAdapter: UserAccessProtocol {        
     
-    static var shared : UserAccessAdapter = UserAccessAdapter(type: .API)
+    static var shared : UserAccessAdapter = UserAccessAdapter(type: .Local)
     var type : AccessType = .Local
     var userAccessProtocol : UserAccessProtocol?
     
@@ -32,7 +32,7 @@ class UserAccessAdapter: UserAccessProtocol {
         }
     }
     
-    func getUserData(completion: @escaping (Error?, UserModel?) -> ()) {
+    func getUserData(completion: @escaping (Error?, UserModel?) -> ()) {        
         userAccessProtocol?.getUserData(completion: completion)
     }
     

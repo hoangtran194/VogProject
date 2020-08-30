@@ -11,7 +11,7 @@
 		4F342CD024FB86EA00D5FA5C /* UserAccessAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F342CCF24FB86EA00D5FA5C /* UserAccessAdapter.swift */; };
 		4F35687B24F8CBB100B0922A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F35687A24F8CBB100B0922A /* AppDelegate.swift */; };
 		4F35687D24F8CBB100B0922A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F35687C24F8CBB100B0922A /* SceneDelegate.swift */; };
-		4F35687F24F8CBB100B0922A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F35687E24F8CBB100B0922A /* ViewController.swift */; };
+		4F35687F24F8CBB100B0922A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F35687E24F8CBB100B0922A /* HomeViewController.swift */; };
 		4F35688224F8CBB100B0922A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F35688024F8CBB100B0922A /* Main.storyboard */; };
 		4F35688424F8CBB400B0922A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F35688324F8CBB400B0922A /* Assets.xcassets */; };
 		4F35688724F8CBB400B0922A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F35688524F8CBB400B0922A /* LaunchScreen.storyboard */; };
@@ -51,7 +51,7 @@
 		4F35687724F8CBB100B0922A /* VogProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VogProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F35687A24F8CBB100B0922A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F35687C24F8CBB100B0922A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4F35687E24F8CBB100B0922A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4F35687E24F8CBB100B0922A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4F35688124F8CBB100B0922A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F35688324F8CBB400B0922A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F35688624F8CBB400B0922A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -111,6 +111,33 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		4F342D0D24FB9E6F00D5FA5C /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				4F35687A24F8CBB100B0922A /* AppDelegate.swift */,
+				4F35687C24F8CBB100B0922A /* SceneDelegate.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		4F342D0E24FB9E9200D5FA5C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4F35687E24F8CBB100B0922A /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4F342D0F24FB9EA700D5FA5C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4F35688324F8CBB400B0922A /* Assets.xcassets */,
+				4F35688524F8CBB400B0922A /* LaunchScreen.storyboard */,
+				4F35688024F8CBB100B0922A /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		4F35686E24F8CBB100B0922A = {
 			isa = PBXGroup;
 			children = (
@@ -136,15 +163,12 @@
 		4F35687924F8CBB100B0922A /* VogProject */ = {
 			isa = PBXGroup;
 			children = (
+				4F342D0F24FB9EA700D5FA5C /* Resources */,
+				4F342D0E24FB9E9200D5FA5C /* ViewControllers */,
+				4F342D0D24FB9E6F00D5FA5C /* Configuration */,
 				4F0BD3F424FB0D4000520625 /* Helpers */,
 				4F8BD7DB24FB075B0090695D /* DAOs */,
 				4F8BD7D824FB06980090695D /* Models */,
-				4F35687A24F8CBB100B0922A /* AppDelegate.swift */,
-				4F35687C24F8CBB100B0922A /* SceneDelegate.swift */,
-				4F35687E24F8CBB100B0922A /* ViewController.swift */,
-				4F35688024F8CBB100B0922A /* Main.storyboard */,
-				4F35688324F8CBB400B0922A /* Assets.xcassets */,
-				4F35688524F8CBB400B0922A /* LaunchScreen.storyboard */,
 				4F35688824F8CBB400B0922A /* Info.plist */,
 			);
 			path = VogProject;
@@ -449,7 +473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F35687F24F8CBB100B0922A /* ViewController.swift in Sources */,
+				4F35687F24F8CBB100B0922A /* HomeViewController.swift in Sources */,
 				4F8BD7E124FB088F0090695D /* UserAccessLocal.swift in Sources */,
 				4F35687B24F8CBB100B0922A /* AppDelegate.swift in Sources */,
 				4F342CD024FB86EA00D5FA5C /* UserAccessAdapter.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 
 class UserAccessLocal: UserAccessProtocol {
     
-    static var shared : UserAccessAPI = UserAccessAPI()
+    static var shared : UserAccessLocal = UserAccessLocal()
     
     /*
     * Function: if user data doesn't have make the dafault and save it to user default then return the user data
