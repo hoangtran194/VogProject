@@ -45,9 +45,7 @@ class UserAccessLocal: UserAccessProtocol {
     * @return:
     */
     func setUserData(_ userData: UserModel, completion: @escaping (Error?, UserModel?) -> ()) {
-        let defaults = UserDefaults.standard
-        defaults.set(userData,forKey: Constants.kUserObject)
-        defaults.synchronize()
+        _ = saveUserDataToUserDefault(userData: userData)
         completion(nil, userData)
     }
     
@@ -58,14 +56,11 @@ class UserAccessLocal: UserAccessProtocol {
     * @return:
     */
     func setUserPassword(_ newPassword: String, completion: @escaping (Error?, UserModel?) -> ()) {
-        let defaults = UserDefaults.standard
-        let object = defaults.object(forKey: Constants.kUserObject) as? UserModel
-        
-        object?.passWord = newPassword
-        defaults.object(forKey: Constants.kUserObject)
-        defaults.synchronize()
-        
-        completion(nil, object)
+        getUserData { (error, userModel) in
+            userModel?.passWord = newPassword
+            _ = saveUserDataToUserDefault(userData: userModel!)
+            completion(nil, userModel)
+        }
     }
     
     

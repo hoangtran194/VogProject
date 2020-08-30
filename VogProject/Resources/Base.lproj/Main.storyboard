@@ -140,7 +140,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gZ-IP-0iM" userLabel="ProfileView">
                                         <rect key="frame" x="35" y="228" width="303" height="135"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yvn-e1-V6N">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yvn-e1-V6N">
                                                 <rect key="frame" x="8" y="8" width="287" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="0MX-wq-PSX"/>
@@ -148,7 +148,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyB-Lb-lvC">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyB-Lb-lvC">
                                                 <rect key="frame" x="8" y="50" width="287" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="Mlo-GB-UI7"/>
@@ -156,7 +156,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vT4-ht-v9i">
+                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vT4-ht-v9i">
                                                 <rect key="frame" x="8" y="92" width="287" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="UZf-zu-541"/>
@@ -182,7 +182,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r1A-Sc-VlC">
                                         <rect key="frame" x="35" y="433" width="303" height="95"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tiq-IU-hA2">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tiq-IU-hA2">
                                                 <rect key="frame" x="8" y="8" width="287" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="gL2-eH-o1o"/>
@@ -190,7 +190,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c08-km-GkN">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password Confirmation" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c08-km-GkN">
                                                 <rect key="frame" x="8" y="50" width="287" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="6RP-SA-zbl"/>
@@ -215,12 +215,14 @@
                                         <state key="normal" title="Edit Profile"/>
                                         <connections>
                                             <action selector="editProfileButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Rv-5f-mcA"/>
+                                            <action selector="editProfileButtonClicked:" destination="MTd-Ey-y7Z" eventType="touchUpInside" id="ecS-yG-lSn"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgH-2N-Vl4">
                                         <rect key="frame" x="126" y="548" width="123" height="30"/>
                                         <state key="normal" title="Change Password"/>
                                         <connections>
+                                            <action selector="changePassWordButtonClicked:" destination="MTd-Ey-y7Z" eventType="touchUpInside" id="dOc-fx-lag"/>
                                             <action selector="editProfileButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7bR-jO-xbf"/>
                                         </connections>
                                     </button>

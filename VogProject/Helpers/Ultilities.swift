@@ -20,6 +20,15 @@ func roundedImage(imageView : UIImageView) {
     imageView.contentMode = .scaleAspectFill
 }
 
+func isTextValid(text : String?) -> Bool
+{
+    if text == nil || text == "" {
+        return false
+    }
+    
+    return true
+}
+
 func loadImage(fileName: String) -> UIImage? {
     let fileURL = documentsUrl.appendingPathComponent(fileName)
     do {
