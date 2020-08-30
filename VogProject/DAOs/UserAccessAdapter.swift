@@ -14,7 +14,7 @@ enum AccessType {
   case Local
 }
 
-class UserAccessAdapter: UserAccessProtocol {        
+class UserAccessAdapter: UserAccessProtocol {
     
     static var shared : UserAccessAdapter = UserAccessAdapter(type: .Local)
     var type : AccessType = .Local
@@ -30,6 +30,10 @@ class UserAccessAdapter: UserAccessProtocol {
         }else{
             userAccessProtocol = UserAccessAPI.shared
         }
+    }
+    
+    func loadImage(imageURL: String, completion: @escaping (Error?, UIImage?) -> ()) {
+        userAccessProtocol?.loadImage(imageURL: imageURL, completion: completion)
     }
     
     func getUserData(completion: @escaping (Error?, UserModel?) -> ()) {        

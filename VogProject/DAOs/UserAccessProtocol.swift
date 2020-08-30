@@ -8,7 +8,9 @@
 
 import UIKit
 
-protocol UserAccessProtocol {
+protocol UserAccessProtocol {    
+    
+    func loadImage(imageURL: String,completion : @escaping(Error?,UIImage?)->())
     
     func getUserData(completion : @escaping(Error?,UserModel?)->())
     

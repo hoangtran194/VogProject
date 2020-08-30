@@ -32,4 +32,6 @@ class Constants: NSObject {
     static let kUserPassWord       = "HoangPassWord@1"
     static let kUserImageURL       = ""
     
+    static let kdefaultImageName   = "default_avatar.png"
+    
 }

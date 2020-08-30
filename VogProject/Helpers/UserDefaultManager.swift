@@ -8,14 +8,29 @@
 
 import SwiftUI
 
-struct UserDefaultManager: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+func saveUserDataToUserDefault(userData : UserModel) ->Bool{
+    do {
+        let encodedData = try NSKeyedArchiver.archivedData(withRootObject: userData, requiringSecureCoding: false)
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(encodedData, forKey: Constants.kUserObject)
+        userDefaults.synchronize()
+        return true
+    } catch {
+        return false
     }
 }
 
-struct UserDefaultManager_Previews: PreviewProvider {
-    static var previews: some View {
-        UserDefaultManager()
+func getUserDataFromUserDefault()->UserModel?{
+    let decoded  = UserDefaults.standard.object(forKey: Constants.kUserObject) as? Data
+    
+    if decoded == nil {
+        return nil
+    }
+    
+    do {
+        let userObject = try NSKeyedUnarchiver.unarchivedObject(ofClass: UserModel.self, from: decoded!)
+        return userObject
+    } catch {
+        return nil
     }
 }

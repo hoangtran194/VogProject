@@ -17,6 +17,8 @@ enum NetworkError : Error
 
 
 class UserAccessAPI: UserAccessProtocol {
+
+    
     
     static var shared : UserAccessAPI = UserAccessAPI()
     
@@ -56,9 +58,6 @@ class UserAccessAPI: UserAccessProtocol {
     }
     
     
-    ///////////////////////////////////////////////////////////////
-    //MARK: - APIs
-    ///////////////////////////////////////////////////////////////
     func setUserData(_ userData : UserModel ,completion : @escaping(Error?,UserModel?)->()) {
         let endPoint        = Constants.updateProfile
         let header          = headerWithToken()
@@ -90,9 +89,6 @@ class UserAccessAPI: UserAccessProtocol {
         }
     }
     
-    ///////////////////////////////////////////////////////////////
-    //MARK: - APIs
-    ///////////////////////////////////////////////////////////////
     func setUserPassword(_ newPassword: String, completion: @escaping (Error?, UserModel?) -> ()) {
         let endPoint        = Constants.updatePassWord
         let header          = headerWithToken()
@@ -123,6 +119,10 @@ class UserAccessAPI: UserAccessProtocol {
                     completion( NetworkError.unKnown(response.value ?? ""), nil)
                 }
         }
+    }
+    
+    func loadImage(imageURL: String, completion: @escaping (Error?, UIImage?) -> ()) {
+        completion( NetworkError.unKnown("Need to implement get image from URL"), nil)
     }
 }
 

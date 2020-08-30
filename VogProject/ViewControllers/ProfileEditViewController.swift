@@ -8,14 +8,40 @@
 
 import SwiftUI
 
-struct ProfileEditViewController: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+class ProfileEditViewController: UIViewController {
+    
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var userFirstNameTextField: UITextField!
+    @IBOutlet weak var userUserNameTextField: UITextField!
+    @IBOutlet weak var userLastNameTextField: UITextField!
+    @IBOutlet weak var userPassWordTextField: UITextField!
+    @IBOutlet weak var userPassWordConfirmationTextField: UITextField!
+    
+    var userModel : UserModel?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupLayout()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        userFirstNameTextField.text = userModel?.firstName
+        userLastNameTextField.text = userModel?.lastName
+        userUserNameTextField.text = userModel?.userName
+        userPassWordTextField.text = userModel?.passWord
+     
+        UserAccessAdapter.shared.loadImage(imageURL: (userModel!.imageURL)!) { (error, image) in
+            if image != nil{
+                self.userImage.image = image
+            }
+        }
+    }
+    
+    fileprivate func setupLayout() {
+        roundedImage(imageView: self.userImage)
+    }
+    
 }
 
-struct ProfileEditViewController_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileEditViewController()
-    }
-}

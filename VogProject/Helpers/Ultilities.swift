@@ -8,14 +8,38 @@
 
 import SwiftUI
 
-struct Ultilities: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+var documentsUrl: URL {
+    return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
 }
 
-struct Ultilities_Previews: PreviewProvider {
-    static var previews: some View {
-        Ultilities()
-    }
+func roundedImage(imageView : UIImageView) {
+    imageView.layer.cornerRadius = imageView.frame.size.width/2
+    imageView.layer.borderColor = UIColor.black.cgColor
+    imageView.layer.borderWidth = 2
+    imageView.clipsToBounds = true
+    imageView.contentMode = .scaleAspectFill
 }
+
+func loadImage(fileName: String) -> UIImage? {
+    let fileURL = documentsUrl.appendingPathComponent(fileName)
+    do {
+        let imageData = try Data(contentsOf: fileURL)
+        return UIImage(data: imageData)
+    } catch {
+        print("Error loading image : \(error)")
+    }
+    return nil
+}
+
+func saveImage(image: UIImage) -> String? {
+    let fileName = Constants.kdefaultImageName
+    let fileURL = documentsUrl.appendingPathComponent(fileName)
+    if let imageData = image.jpegData(compressionQuality: 1.0) {
+       try? imageData.write(to: fileURL, options: .atomic)
+       return fileName // ----> Save fileName
+    }
+    print("Error saving image")
+    return nil
+}
+
+

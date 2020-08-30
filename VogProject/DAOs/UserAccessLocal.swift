@@ -12,21 +12,29 @@ class UserAccessLocal: UserAccessProtocol {
     
     static var shared : UserAccessLocal = UserAccessLocal()
     
+    func setDefaultImage()->String?{
+        let profileImage = UIImage(named: Constants.kdefaultImageName)!
+        return saveImage(image: profileImage)
+    }
+    
     /*
     * Function: if user data doesn't have make the dafault and save it to user default then return the user data
     * @param:
     * @return:
     */
     func getUserData(completion: @escaping (Error?, UserModel?) -> ()) {
-        let defaults = UserDefaults.standard
-        var object = defaults.object(forKey: Constants.kUserObject) as? UserModel
+        
+        var object = getUserDataFromUserDefault()
         
         if object == nil {
             object = UserModel()
             object?.initDefaultUser()
-            defaults.object(forKey: Constants.kUserObject)
-            defaults.synchronize()
-        }
+            
+            let imagePath = setDefaultImage()
+            object?.imageURL = imagePath
+                                   
+            _ = saveUserDataToUserDefault(userData: object!)
+        }                
         
         completion(nil, object)
     }
@@ -58,6 +66,22 @@ class UserAccessLocal: UserAccessProtocol {
         defaults.synchronize()
         
         completion(nil, object)
+    }
+    
+    
+    /*
+    * Function:Load the local image file from file name
+    * @param:
+    * @return:
+    */
+    func loadImage(imageURL: String, completion: @escaping (Error?, UIImage?) -> ()) {
+        let fileURL = documentsUrl.appendingPathComponent(imageURL)
+        do {
+            let imageData = try Data(contentsOf: fileURL)
+            completion(nil, UIImage(data: imageData))
+        } catch {
+            completion( NetworkError.unKnown("Can not get the image file"), nil)
+        }
     }
     
 }

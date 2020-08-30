@@ -8,7 +8,41 @@
 
 import UIKit
 
-class UserModel: NSObject, Codable {
+class UserModel: NSObject, Codable, NSCoding , NSSecureCoding{
+    static var supportsSecureCoding: Bool = true
+    
+    override init() {
+        
+    }
+    
+    init(userName: String?,
+         firstName: String?,
+         lastName : String?,
+         imageURL: String?,
+         passWord : String?) {
+        self.userName = userName
+        self.firstName = firstName
+        self.lastName = lastName
+        self.imageURL = imageURL
+        self.passWord = passWord
+    }
+    
+    required init?(coder: NSCoder) {
+        self.userName = coder.decodeObject(forKey: "userName") as? String
+        self.firstName = coder.decodeObject(forKey: "firstName") as? String
+        self.lastName = coder.decodeObject(forKey: "lastName") as? String
+        self.imageURL = coder.decodeObject(forKey: "imageURL") as? String
+        self.passWord = coder.decodeObject(forKey: "passWord") as? String
+    }
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(self.userName, forKey: "userName")
+        coder.encode(self.firstName, forKey: "firstName")
+        coder.encode(self.lastName, forKey: "lastName")
+        coder.encode(self.passWord, forKey: "passWord")
+        coder.encode(self.imageURL, forKey: "imageURL")
+    }
+
     var userName : String?
     var firstName : String?
     var lastName : String?
@@ -22,7 +56,17 @@ class UserModel: NSObject, Codable {
         case passWord
         case imageURL
     }
+    
+    func copy(userModel: UserModel) -> UserModel
+    {
+        return UserModel(userName: userModel.userName,
+                         firstName: userModel.firstName,
+                         lastName: userModel.lastName,
+                         imageURL: userModel.imageURL,
+                         passWord: userModel.passWord)
+    }
 }
+
 
 ///////////////////////////////////////////////////////////////
 //MARK: - Functions
