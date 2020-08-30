@@ -93,10 +93,10 @@ class UserAccessAPI: UserAccessProtocol {
     ///////////////////////////////////////////////////////////////
     //MARK: - APIs
     ///////////////////////////////////////////////////////////////
-    func setUserPassword(_ userData : UserModel ,completion : @escaping(Error?,UserModel?)->()) {
+    func setUserPassword(_ newPassword: String, completion: @escaping (Error?, UserModel?) -> ()) {
         let endPoint        = Constants.updatePassWord
         let header          = headerWithToken()
-        let parameters      = userData.toDictionary()
+        let parameters      = [Constants.kUserPassWord:newPassword]
         
         AF.request(endPoint,
                    method: .post,
@@ -136,7 +136,7 @@ extension UserAccessAPI{
     fileprivate func headerWithToken()->[String:String]
     {
         var result = ["Content-Type":"application/json"]
-        let token = KeychainManager.shareInstance.getString(keyString: Constants.kToken)
+        let token =  Constants.kTokenValue
         if token != ""{
             result["Authorization"] = "Bearer " + token
         }

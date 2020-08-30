@@ -22,4 +22,14 @@ class Constants: NSObject {
     ///////////////////////////////////////////////////////////////
     static let emptyValue           = ""
     static let kToken               = "kToken"
+    static let kTokenValue          = "TokenGottenFromJWT"
+    static let kUserObject          = "kUserObject"
+    
+    
+    static let kUserFirstName      = "Hoang"
+    static let kUserLastName       = "Tran"
+    static let kUserUserName       = "hoangtran194"
+    static let kUserPassWord       = "HoangPassWord@1"
+    static let kUserImageURL       = ""
+    
 }

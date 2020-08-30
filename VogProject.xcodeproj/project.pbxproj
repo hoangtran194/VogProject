@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F0BD3F624FB0D7900520625 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0BD3F524FB0D7900520625 /* Constants.swift */; };
-		4F0BD3F824FB0E9600520625 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0BD3F724FB0E9600520625 /* KeychainManager.swift */; };
+		4F342CD024FB86EA00D5FA5C /* UserAccessAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F342CCF24FB86EA00D5FA5C /* UserAccessAdapter.swift */; };
 		4F35687B24F8CBB100B0922A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F35687A24F8CBB100B0922A /* AppDelegate.swift */; };
 		4F35687D24F8CBB100B0922A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F35687C24F8CBB100B0922A /* SceneDelegate.swift */; };
 		4F35687F24F8CBB100B0922A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F35687E24F8CBB100B0922A /* ViewController.swift */; };
@@ -47,7 +47,7 @@
 		0138AC448C79A441A4B2E7ED /* Pods-VogProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VogProject.release.xcconfig"; path = "Target Support Files/Pods-VogProject/Pods-VogProject.release.xcconfig"; sourceTree = "<group>"; };
 		49A688295B2CD9AFA9E9899E /* Pods_VogProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VogProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F0BD3F524FB0D7900520625 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		4F0BD3F724FB0E9600520625 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		4F342CCF24FB86EA00D5FA5C /* UserAccessAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccessAdapter.swift; sourceTree = "<group>"; };
 		4F35687724F8CBB100B0922A /* VogProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VogProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F35687A24F8CBB100B0922A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F35687C24F8CBB100B0922A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				4F0BD3F524FB0D7900520625 /* Constants.swift */,
-				4F0BD3F724FB0E9600520625 /* KeychainManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -183,6 +182,7 @@
 				4F8BD7DC24FB077E0090695D /* UserAccessProtocol.swift */,
 				4F8BD7DE24FB08820090695D /* UserAccessAPI.swift */,
 				4F8BD7E024FB088F0090695D /* UserAccessLocal.swift */,
+				4F342CCF24FB86EA00D5FA5C /* UserAccessAdapter.swift */,
 			);
 			path = DAOs;
 			sourceTree = "<group>";
@@ -452,8 +452,8 @@
 				4F35687F24F8CBB100B0922A /* ViewController.swift in Sources */,
 				4F8BD7E124FB088F0090695D /* UserAccessLocal.swift in Sources */,
 				4F35687B24F8CBB100B0922A /* AppDelegate.swift in Sources */,
+				4F342CD024FB86EA00D5FA5C /* UserAccessAdapter.swift in Sources */,
 				4F8BD7DD24FB077E0090695D /* UserAccessProtocol.swift in Sources */,
-				4F0BD3F824FB0E9600520625 /* KeychainManager.swift in Sources */,
 				4F8BD7DF24FB08820090695D /* UserAccessAPI.swift in Sources */,
 				4F8BD7DA24FB06C00090695D /* UserModel.swift in Sources */,
 				4F35687D24F8CBB100B0922A /* SceneDelegate.swift in Sources */,

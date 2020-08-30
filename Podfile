@@ -7,7 +7,6 @@ target 'VogProject' do
 
   # Pods for VogProject
     pod 'Alamofire'
-    pod 'KeychainAccess'
 
   target 'VogProjectTests' do
     inherit! :search_paths

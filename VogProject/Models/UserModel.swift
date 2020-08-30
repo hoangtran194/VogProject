@@ -72,4 +72,19 @@ extension UserModel {
         }
         return false
     }
+    
+    
+    /*
+     * Function: return whether user is equal to another user or not
+     *
+     */
+    func initDefaultUser()
+    {
+        self.firstName  = Constants.kUserFirstName
+        self.lastName   = Constants.kUserLastName
+        self.userName   = Constants.kUserUserName
+        self.passWord   = Constants.kUserPassWord
+        self.imageURL   = Constants.kUserImageURL
+    }
+    
 }
